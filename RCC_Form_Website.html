@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RCC | Membership Application</title>
+<style>
+:root{--red:#e31b2f;--bg:#08090c;--panel:#111319;--line:#2a2d35;--muted:#a7abb5;--white:#f5f6f8}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% 0,#291015 0,transparent 34%),var(--bg);color:var(--white);font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+.wrap{max-width:900px;margin:auto;padding:28px 16px 60px}.hero{text-align:center;padding:28px 12px 24px;border-bottom:1px solid #292b32}
+.logo{font-size:clamp(48px,9vw,84px);font-weight:950;letter-spacing:-5px;line-height:1;background:linear-gradient(110deg,#fff 45%,#e31b2f 46%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.brand{letter-spacing:5px;font-weight:800;font-size:13px}.tag{color:#b7bbc4;letter-spacing:2px;font-size:11px;margin-top:8px}
+h1{font-size:clamp(25px,5vw,42px);line-height:1.1;margin:24px 0 8px;text-transform:uppercase;font-weight:900}h1 span{color:var(--red)}.intro{color:#b9bdc6;max-width:600px;margin:0 auto}
+form{margin-top:22px}.section{background:linear-gradient(145deg,#14161c,#0e1015);border:1px solid var(--line);border-radius:14px;padding:22px;margin:16px 0;box-shadow:0 12px 35px #0003}
+.section h2{margin:0 0 18px;font-size:15px;text-transform:uppercase;letter-spacing:1px;border-bottom:1px solid #30333b;padding-bottom:12px}.num{display:inline-grid;place-items:center;background:var(--red);width:27px;height:27px;border-radius:6px;margin-right:9px;font-weight:900}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.field{display:flex;flex-direction:column;gap:6px}.full{grid-column:1/-1}label{font-size:12px;color:#d6d8de;font-weight:650}input,select,textarea{width:100%;background:#090a0e;border:1px solid #343741;border-radius:7px;padding:12px;color:white;font:inherit;outline:none}input:focus,select:focus,textarea:focus{border-color:var(--red);box-shadow:0 0 0 2px #e31b2f25}input::placeholder,textarea::placeholder{color:#737783}textarea{resize:vertical;min-height:85px}.checks{display:flex;flex-wrap:wrap;gap:12px 18px;padding-top:6px}.checks label{display:flex;align-items:center;gap:7px;font-weight:500}.checks input{width:auto;accent-color:var(--red)}
+.consent{color:#aeb2bc;font-size:12px}.submit{width:100%;border:0;background:linear-gradient(90deg,#bd1022,#f1263b);color:white;padding:16px;border-radius:9px;font-weight:900;letter-spacing:1.5px;font-size:15px;cursor:pointer}.submit:hover{filter:brightness(1.12)}.note{text-align:center;color:#818590;font-size:11px;margin-top:14px}
+@media(max-width:600px){.grid{grid-template-columns:1fr}.section{padding:17px}.logo{letter-spacing:-3px}.wrap{padding:14px 12px 40px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <div class="logo">RCC</div><div class="brand">ROAD LINE CARS CLUB</div>
+  <div class="tag">DRIVE TOGETHER. GROW TOGETHER. <span style="color:#ed2639">BE UNSTOPPABLE.</span></div>
+  <h1>Official <span>Membership</span><br>Application</h1>
+  <p class="intro">Your passion. Your people. Your club.<br>Join a growing community of automotive enthusiasts.</p>
+</header>
+<form id="membershipForm">
+<section class="section"><h2><span class="num">01</span>Personal Information</h2><div class="grid">
+<div class="field full"><label>Full Name *</label><input name="fullName" required placeholder="As shown on your ID"></div>
+<div class="field"><label>Preferred Name (optional)</label><input name="preferredName"></div>
+<div class="field"><label>Date of Birth</label><input name="dob" type="date"></div>
+<div class="field"><label>Mobile / WhatsApp Number *</label><input name="phone" type="tel" required placeholder="+880 1XXXXXXXXX"></div>
+<div class="field"><label>Email Address *</label><input name="email" type="email" required placeholder="you@example.com"></div>
+<div class="field"><label>City / Area *</label><input name="area" required placeholder="Your city or area"></div>
+<div class="field full"><label>Occupation / Profession</label><input name="occupation"></div>
+</div></section>
+<section class="section"><h2><span class="num">02</span>Automotive Profile</h2><div class="grid">
+<div class="field"><label>Do you own a vehicle? *</label><select name="ownsVehicle" required><option value="">Select</option><option>Yes</option><option>No</option></select></div>
+<div class="field"><label>Vehicle Brand</label><input name="brand" placeholder="e.g. Toyota, BMW"></div>
+<div class="field"><label>Model</label><input name="model"></div>
+<div class="field"><label>Modification Type</label><input name="modType" placeholder="Stock / Modified"></div>
+<div class="field full"><label>Modification Details (if any)</label><textarea name="modDetails"></textarea></div>
+<div class="field full"><label>Other Vehicles Owned (optional)</label><input name="otherVehicles"></div>
+<div class="field full"><label>Automotive Interests</label><div class="checks">
+<label><input type="checkbox" name="interests" value="Detailing"> Detailing</label><label><input type="checkbox" name="interests" value="Tuning"> Tuning</label><label><input type="checkbox" name="interests" value="Car Meets"> Car Meets</label><label><input type="checkbox" name="interests" value="Racing"> Racing</label><label><input type="checkbox" name="interests" value="Photography"> Photography</label><label><input type="checkbox" name="interests" value="Others"> Others</label>
+</div></div></div></section>
+<section class="section"><h2><span class="num">03</span>Membership & Community</h2><div class="grid">
+<div class="field full"><label>Why do you want to join RCC? *</label><div class="checks"><label><input type="checkbox" name="joinReason" value="Cars"> Cars</label><label><input type="checkbox" name="joinReason" value="Community"> Community</label><label><input type="checkbox" name="joinReason" value="Events"> Events</label><label><input type="checkbox" name="joinReason" value="Networking"> Networking</label></div></div>
+<div class="field full"><label>Any specific skills or expertise?</label><textarea name="skills" placeholder="Photography, design, event management, etc."></textarea></div>
+<div class="field full"><label>What can you contribute to the community?</label><textarea name="contribution"></textarea></div>
+<div class="field full"><label>Have you participated in any car meets or events?</label><div class="checks"><label><input type="radio" name="events" value="Yes"> Yes</label><label><input type="radio" name="events" value="No"> No</label></div></div>
+<div class="field full"><label>Are you a member of another automotive club?</label><div class="checks"><label><input type="radio" name="otherClub" value="Yes"> Yes</label><label><input type="radio" name="otherClub" value="No"> No</label></div></div>
+</div></section>
+<section class="section"><h2><span class="num">04</span>Emergency Contact</h2><div class="grid">
+<div class="field"><label>Contact Name</label><input name="emergencyName"></div><div class="field"><label>Relationship</label><input name="relationship"></div><div class="field full"><label>Contact Number</label><input name="emergencyPhone" type="tel"></div>
+</div></section>
+<section class="section"><h2><span class="num">05</span>Social & Digital Profile</h2><div class="grid">
+<div class="field"><label>Facebook Profile (optional)</label><input name="facebook" type="url" placeholder="https://"></div><div class="field"><label>Instagram Profile (optional)</label><input name="instagram" type="url" placeholder="https://"></div><div class="field full"><label>Other Social Media (optional)</label><input name="social" placeholder="YouTube, TikTok, etc."></div>
+</div></section>
+<section class="section"><h2><span class="num">06</span>Declaration & Consent</h2>
+<p class="consent">I confirm that the information provided is accurate to the best of my knowledge. I agree to respect RCC community guidelines, event rules, and the safety of fellow members. I understand that submitting this application does not automatically guarantee membership; approval is subject to RCC review.</p>
+<div class="checks"><label><input type="checkbox" name="consent" required> I agree to the declaration above. *</label></div>
+</section>
+<button class="submit" type="submit">SUBMIT MEMBERSHIP APPLICATION ↗</button>
+<p class="note">ROAD LINE CARS CLUB • DRIVE TOGETHER. GROW TOGETHER. BE UNSTOPPABLE.</p>
+</form>
+</div>
+<script>
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyoS-MEoN7Oo0aRtXtoXHJxkgZgLDlEhnxofv7uSqJkWtvfRGs94VLFohpY3h4fl6wY/exec';
+document.getElementById('membershipForm').addEventListener('submit',async function(e){
+ e.preventDefault();
+ const btn=this.querySelector('.submit'); const original=btn.textContent;
+ if(GOOGLE_SCRIPT_URL.includes('PASTE_YOUR')){alert('Google Sheets connection is not configured yet. Follow the setup guide and paste your Apps Script Web App URL into this HTML.');return;}
+ btn.disabled=true;btn.textContent='SUBMITTING…';
+ const data=new FormData(this); const obj={};
+ for(const [k,v] of data.entries()){if(obj[k]){obj[k]=Array.isArray(obj[k])?[...obj[k],v]:[obj[k],v]}else obj[k]=v}
+ try{
+   const response=await fetch(GOOGLE_SCRIPT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8'},body:new URLSearchParams({payload:JSON.stringify(obj)})});
+   alert('Application submitted! Thank you for applying to RCC.');
+   this.reset();
+ }catch(err){alert('Could not submit. Please check your internet connection or contact RCC.');}
+ finally{btn.disabled=false;btn.textContent=original;}
+});
+</script>
+</body></html>
